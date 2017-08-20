@@ -1,0 +1,7 @@
+RewriteEngine On
+Options +FollowSymLinks
+
+# Put anything after the default page (index.php) in a cmd query string
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?cmd=$1 [L]

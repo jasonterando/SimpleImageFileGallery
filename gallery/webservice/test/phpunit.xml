@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="TestBootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="InstantImageFileGallery">
+            <directory>./webserviceTests</directory>
+        </testsuite>
+    </testsuites>
+    <logging>
+        <log type='coverage-html' target='./results/coverage.html' />
+        <log type='testdox-html' target='./results/testdox.html' />
+    </logging>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="false">
+            <file>../src/AlbumProcessor.php</file>
+            <file>../src/Configuration.php</file>
+            <file>../src/Router.php</file>
+        </whitelist>
+    </filter>  
+</phpunit>

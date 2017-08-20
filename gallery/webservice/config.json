@@ -1,0 +1,9 @@
+{
+    "imageURL": "albums",
+    "imagePath": "../albums",
+    "thumbnailMaxWidth": 200,
+    "thumbnailMaxHeight": 200,
+    "supportedFileExts": ["aai", "avi", "bmp", "bmp2", "bmp3", "cmyk", "cmyka", "eps", "eps2", "eps3", "epsf", "epsi", 
+        "exif", "gif", "ico", "jpeg", "jpg", "mpeg", "pcx", "pdf", "png", "png8", "png00", "png24", "png32", "png48", 
+        "png64", "ppm", "pgm", "svg", "tif", "tiff", "wmf"]
+}

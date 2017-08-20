@@ -1,0 +1,6 @@
+logs/*
+!logs/Readme.md
+gallery/albums/*
+!gallery/albums/directory.txt
+gallery/viewers/basic/node_modules/
+gallery/webservice/test/results/

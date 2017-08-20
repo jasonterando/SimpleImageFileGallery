@@ -1,0 +1,144 @@
+body {
+    font-family: calibri, arial, sans-serif;
+    font-size: 16px;
+    color: #000000;
+    padding: 20px;
+}
+
+#gallery a, #gallery a:visited {
+    color: #404040;
+}
+
+#gallery-busy {
+    display: inline-block;
+    visibility: hidden;
+    margin-left: 12px;
+    width: 43px;
+    height: 11px;
+    background: url(gallery-loading.gif) no-repeat;
+}
+
+.gallery-folder, .gallery-file {
+    display: block;
+    position: relative;
+    width: 240px;
+    height: 240px;
+    padding: 12px;
+    background-color: #EFEFEF;
+    text-align: center;
+    margin: 0 12px 12px 0;
+    float: left;
+    cursor: pointer;
+    text-decoration: none;
+    color: #202020;
+}
+
+.gallery-folder-icon {
+    position: absolute;
+    right: 8;
+    top: 8;
+    font-size: 24px;
+    color: #73731D;
+}
+
+.gallery-thumbnail {
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    display: block;
+    background-position: center center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.gallery-file .gallery-thumbnail {
+    cursor: zoom-in;    
+}
+
+.gallery-label {
+    display: block;
+    float: none;
+    position: absolute;
+    bottom: 18px;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    margin-left: -12px;
+}
+
+.gallery-label i {
+    padding-right: 6px;
+}
+
+#gallery-viewer {
+    display: none;
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: #202020;
+    background-color: rgba(32,,32, 32, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+#gallery-content {
+    position: relative;
+    top: 15%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    background: transparent;
+}
+
+#gallery-content {
+    background-repeat: no-repeat;
+}
+
+#gallery-viewer a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+#gallery-viewer a:hover, #gallery-viewer a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+#gallery-viewer .gallery-closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 40px;
+}
+
+#gallery-viewer .gallery-downbtn {
+    position: absolute;
+    top: 20px;
+    right: 120px;
+    font-size: 40px;
+}
+
+@media screen and (max-height: 450px) {
+    #gallery-viewer a {font-size: 20px}
+    #gallery-viewer .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+#gallery-viewer button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px;
+    font-size: 18px;
+}
