@@ -49,7 +49,7 @@ def run_webservice_test():
 
 def install_basic_viewer():
     """ Install libraries required for basic viewer """
-    subprocess.call("docker-compose run development bash -c " \
+    subprocess.call("docker run gallery:development bash -c " \
         "\"cd gallery/viewers/basic " \
         "&& npm install" \
         "&& cp node_modules/jquery/dist/{jquery.min.js,jquery.min.map,jquery.js} js " \
